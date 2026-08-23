@@ -5,49 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahlul-Bayt Kultur- und Religionsverein e.V.</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f8; color: #333; }
-        header { background-color: #1b365d; color: #fff; padding: 40px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 2em; }
-        header p { margin-top: 10px; font-size: 1.1em; color: #cbd5e1; }
-        .container { max-width: 900px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h2 { color: #1b365d; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
-        .fa-text { direction: rtl; text-align: right; font-family: Tahoma, Arial, sans-serif; background: #f8fafc; padding: 15px; border-right: 4px solid #1b365d; margin-top: 15px; border-radius: 4px; }
-        footer { text-align: center; padding: 20px; background: #0f172a; color: #94a3b8; font-size: 0.9em; margin-top: 40px; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f8fafc; color: #1e293b; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #1e3a8a, #0f172a); color: #fff; padding: 50px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 2.2em; }
+        header p { margin-top: 10px; color: #93c5fd; font-size: 1.1em; }
+        nav { background: #0f172a; position: sticky; top: 0; z-index: 100; text-align: center; padding: 12px; }
+        nav a { color: #f8fafc; text-decoration: none; margin: 0 12px; font-weight: 600; font-size: 0.95em; transition: color 0.3s; }
+        nav a:hover { color: #60a5fa; }
+        .container { max-width: 950px; margin: 30px auto; background: #fff; padding: 35px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        h2 { color: #1e3a8a; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-top: 0; }
+        h3 { color: #0f172a; margin-top: 20px; }
+        .fa-box { direction: rtl; text-align: right; font-family: Tahoma, Arial, sans-serif; background: #f1f5f9; padding: 18px; border-right: 4px solid #1e3a8a; border-radius: 6px; margin-top: 15px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        table, th, td { border: 1px solid #cbd5e1; }
+        th, td { padding: 12px; text-align: left; }
+        th { background-color: #f1f5f9; color: #1e3a8a; }
+        .legal-block { font-size: 0.9em; color: #475569; }
+        footer { text-align: center; padding: 25px; background: #0f172a; color: #94a3b8; font-size: 0.9em; margin-top: 50px; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.)</h1>
-        <p>Gemeinnütziger Verein in Leer (Ostfriesland) & Saterland</p>
+        <p>Gemeinnütziger Verein in Leer (Ostfriesland)</p>
     </header>
 
-    <div class="container">
+    <nav>
+        <a href="#about">Über uns</a>
+        <a href="#events">Veranstaltungen</a>
+        <a href="#membership">Mitgliedschaft</a>
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
+    </nav>
+
+    <!-- Über uns -->
+    <div class="container" id="about">
         <h2>Über uns / درباره ما</h2>
-        <p>Herzlich willkommen auf der offiziellen Webseite des Ahlul-Bayt Kultur- und Religionsvereins e.V. (i.Gr.). Wir setzen uns für die Förderung von Religion, Kultur, Erziehung und Völkerverständigung ein.</p>
+        <p>Der Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.) fördert das kulturelle, religiöse und soziale Miteinander in Leer und Umgebung. Unsere Angebote richten sich an Familien, Jugendliche und alle Interessierten.</p>
         
-        <div class="fa-text">
-            به وب‌سایت رسمی انجمن فرهنگی و مذهبی اهل‌بیت (ع) خوش آمدید. این انجمن با هدف ارتقای فعالیت‌های فرهنگی، مذهبی، آموزشی و تقویت همبستگی اجتماعی در منطقه فعالیت می‌کند.
+        <div class="fa-box">
+            به وب‌سایت رسمی انجمن فرهنگی و مذهبی اهل‌بیت (ع) خوش آمدید. هدف ما ارتقای فعالیت‌های فرهنگی، مذهبی، آموزشی و ایجاد همبستگی و ارتباط میان‌فرهنگی در منطقه لیر و حومه است.
         </div>
     </div>
 
-    <div class="container">
-        <h2>Unsere Ziele / اهداف انجمن</h2>
-        <ul>
-            <li>Förderung der Religion, Kunst und Kultur</li>
-            <li>Pflege der interkulturellen und interreligiösen Begegnung</li>
-            <li>Soziale und kulturelle Angebote für Familien und Jugendliche</li>
-        </ul>
+    <!-- Veranstaltungen -->
+    <div class="container" id="events">
+        <h2>Veranstaltungen & Termine / برنامه‌ها</h2>
+        <p>Hier finden Sie unsere aktuellen Termine und Veranstaltungen:</p>
+        <table>
+            <tr>
+                <th>Datum</th>
+                <th>Veranstaltung</th>
+                <th>Ort</th>
+            </tr>
+            <tr>
+                <td>Wöchentlich (Fr.)</td>
+                <td>Kulturelles & Religiöses Treffen</td>
+                <td>Vereinsräume / Leer</td>
+            </tr>
+            <tr>
+                <td>Monatlich</td>
+                <td>Familien- und Jugendnachmittag</td>
+                <td>Leer (Ostfriesland)</td>
+            </tr>
+        </table>
     </div>
 
-    <div class="container">
-        <h2>Kontakt / تماس با ما</h2>
-        <p><strong>Sitz des Vereins:</strong> Leer (Ostfriesland) / Saterland</p>
-        <p><strong>E-Mail:</strong> kontakt@ahlulbayt-verein.de</p>
+    <!-- Mitgliedschaft -->
+    <div class="container" id="membership">
+        <h2>Mitgliedschaft / عضویت</h2>
+        <p>Möchten Sie unseren Verein unterstützen und Mitglied werden? Wir freuen uns über jedes neue Mitglied!</p>
+        <p>Sie können den Antrag auf Mitgliedschaft formlos per E-Mail anfragen oder direkt bei unseren Treffen ausfüllen.</p>
+        <div class="fa-box">
+            برای عضویت و حمایت از فعالیت‌های انجمن، می‌توانید درخواست خود را از طریق ایمیل ارسال نمایید یا در جلسات عمومی فرم عضویت را تکمیل کنید.
+        </div>
+    </div>
+
+    <!-- Impressum -->
+    <div class="container legal-block" id="impressum">
+        <h2>Impressum</h2>
+        <p><strong>Angaben gemäß § 5 DDG:</strong></p>
+        <p>
+            Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.)<br>
+            Vertreten durch den Vorstand<br>
+            Sitz des Vereins: Leer (Ostfriesland)<br>
+            E-Mail: kontakt@ahlulbayt-verein.de
+        </p>
+        <p><strong>Registereintragung:</strong><br>
+        Eintragung im Vereinsregister (in Gründung / i.Gr.). Registergericht: Amtsgericht Aurich / Oldenburg.</p>
+        <p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong><br>
+        Der Vorstand des Vereins.</p>
+    </div>
+
+    <!-- Datenschutz -->
+    <div class="container legal-block" id="datenschutz">
+        <h2>Datenschutzerklärung</h2>
+        <h3>1. Datenschutz auf einen Blick</h3>
+        <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Diese Webseite nutzt keine Tracking-Cookies und speichert keine personenbezogenen Daten der Besucher.</p>
+        <h3>2. Server-Log-Dateien</h3>
+        <p>Der Provider dieser Seiten (GitHub Inc.) erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch übermittelt.</p>
+        <h3>3. Ihre Rechte</h3>
+        <p>Sie haben jederzeit das Recht auf kostenlose Auskunft über Ihre gespeicherten personenbezogenen Daten. Bei Fragen wenden Sie sich bitte an die im Impressum angegebene E-Mail-Adresse.</p>
     </div>
 
     <footer>
-        <p>&copy; 2026 Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.). Alle Rechte vorbehalten.</p>
+        <p>&copy; 2026 Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.) | All Rights Reserved.</p>
     </footer>
 
 </body>
