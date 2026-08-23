@@ -6,28 +6,39 @@
     <title>Ahlul-Bayt Kultur- und Religionsverein e.V.</title>
     <style>
         * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f8fafc; color: #1e293b; line-height: 1.6; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f1f5f9; color: #1e293b; line-height: 1.6; }
         
         /* Navbar */
-        nav { background: #0f172a; position: sticky; top: 0; z-index: 100; text-align: center; padding: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-        nav a { color: #f8fafc; text-decoration: none; margin: 0 12px; font-weight: 600; font-size: 0.95em; transition: 0.3s; }
+        nav { background: #0f172a; position: sticky; top: 0; z-index: 100; text-align: center; padding: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        nav a { color: #f8fafc; text-decoration: none; margin: 0 10px; font-weight: 600; font-size: 0.9em; transition: 0.3s; white-space: nowrap; }
         nav a:hover { color: #38bdf8; }
 
-        /* Header / Hero Section */
+        /* Header / Hero Section - اصلاح شده برای بالاتر رفتن */
         header { 
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 138, 0.85)), url('hero-bg.jpg') center/cover no-repeat; 
             color: #fff; 
-            padding: 60px 20px; 
+            padding: 30px 20px; /* کاهش پدینگ برای بالاتر رفتن */
             text-align: center; 
         }
-        .logo { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid #38bdf8; margin-bottom: 15px; background: #fff; }
-        header h1 { margin: 10px 0 5px 0; font-size: 2.2em; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
-        header p { margin-top: 5px; color: #93c5fd; font-size: 1.1em; }
+        .logo { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid #38bdf8; margin-bottom: 10px; background: #fff; } /* کاهش اندازه و مارجین */
+        header h1 { margin: 5px 0 0 0; font-size: 1.9em; text-shadow: 0 2px 4px rgba(0,0,0,0.5); } /* کاهش مارجین */
+        header p { margin-top: 2px; color: #93c5fd; font-size: 1em; } /* کاهش مارجین */
 
         /* Containers & Cards */
-        .container { max-width: 950px; margin: 35px auto; background: #fff; padding: 35px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .container { max-width: 950px; margin: 25px auto; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         h2 { color: #1e3a8a; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-top: 0; }
         
+        /* Bakhsh "Über uns" - اصلاح شده برای دیده شدن پس‌زمینه */
+        #about.container {
+            background-color: #f8fafc; /* تغییر به یک خاکستری بسیار ملایم متمایز */
+            border: 1px solid #e2e8f0; /* اضافه کردن حاشیه ظریف */
+        }
+
+        /* سایر کارت‌ها که سفید باقی می‌مانند */
+        .container:not(#about) {
+            background-color: #fff;
+        }
+
         .fa-box { direction: rtl; text-align: right; font-family: Tahoma, Arial, sans-serif; background: #f1f5f9; padding: 18px; border-right: 4px solid #1e3a8a; border-radius: 6px; margin-top: 15px; }
         
         /* Grid Section for Activities */
@@ -45,7 +56,7 @@
         .legal-block { font-size: 0.9em; color: #475569; }
 
         /* Footer */
-        footer { text-align: center; padding: 25px; background: #0f172a; color: #94a3b8; font-size: 0.9em; margin-top: 50px; }
+        footer { text-align: center; padding: 20px; background: #0f172a; color: #94a3b8; font-size: 0.9em; margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -62,13 +73,13 @@
 
     <!-- Header / Hero -->
     <header>
-        <!-- تصویر لوگو (در صورت وجود logo.png نشان داده می‌شود) -->
+        <!-- تصویر لوگو (در صورت وجود logo.jpg نشان داده می‌شود) -->
         <img src="logo.jpg" alt="Ahlul-Bayt Logo" class="logo" onerror="this.style.display='none'">
         <h1>Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.)</h1>
         <p>Gemeinnütziger Verein in Leer (Ostfriesland)</p>
     </header>
 
-    <!-- Über uns -->
+    <!-- Über uns - بخش اصلاح شده -->
     <div class="container" id="about">
         <h2>Über uns / درباره ما</h2>
         <p>Der Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.) fördert das kulturelle, religiöse und soziale Miteinander in Leer und Umgebung. Unsere Angebote richten sich an Familien, Jugendliche und alle Interessierten.</p>
@@ -78,7 +89,7 @@
         </div>
     </div>
 
-    <!-- Schwerpunkte / Bakhsh-ha -->
+    <!-- Schwerpunkte / Bakhsh-ha - سفید باقی می‌ماند -->
     <div class="container" id="activities">
         <h2>Unsere Angebote & Schwerpunkte / خدمات و فعالیت‌ها</h2>
         <div class="grid-3">
@@ -123,7 +134,7 @@
     <div class="container" id="membership">
         <h2>Mitgliedschaft / عضویت</h2>
         <p>Möchten Sie unseren Verein unterstützen und Mitglied werden? Wir freuen uns über jedes neue Mitglied!</p>
-        <p>Sie können den Antrag auf Mitgliedschaft formlos per E-Mail anfragen oder direkt bei unseren Treffen ausfüllen.</p>
+        <p>Sie können den Antrag auf Mitgliedschaft formlos per E-Mail anfragen یا مستقیم با ایمیل زیر در تماس باشید.</p>
         <div class="fa-box">
             برای عضویت و حمایت از فعالیت‌های انجمن، می‌توانید درخواست خود را از طریق ایمیل زیر ارسال نمایید.
         </div>
