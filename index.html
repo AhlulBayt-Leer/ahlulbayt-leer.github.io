@@ -3,53 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahlul-Bayt Kultur- und Religionsverein e.V.</title>
+    <title>Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.) - Leer</title>
     <style>
         * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f1f5f9; color: #1e293b; line-height: 1.6; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f1f5f9; color: #1e293b; line-height: 1.7; }
         
         /* Navbar */
         nav { background: #0f172a; position: sticky; top: 0; z-index: 100; text-align: center; padding: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
         nav a { color: #f8fafc; text-decoration: none; margin: 0 10px; font-weight: 600; font-size: 0.9em; transition: 0.3s; white-space: nowrap; }
         nav a:hover { color: #38bdf8; }
 
-        /* Header / Hero Section - اصلاح شده برای بالاتر رفتن */
+        /* Header / Hero Section */
         header { 
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 138, 0.85)), url('hero-bg.jpg') center/cover no-repeat; 
+            background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(30, 58, 138, 0.88)), url('hero-bg.jpg') center/cover no-repeat; 
             color: #fff; 
-            padding: 30px 20px; /* کاهش پدینگ برای بالاتر رفتن */
+            padding: 40px 20px; 
             text-align: center; 
         }
-        .logo { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid #38bdf8; margin-bottom: 10px; background: #fff; } /* کاهش اندازه و مارجین */
-        header h1 { margin: 5px 0 0 0; font-size: 1.9em; text-shadow: 0 2px 4px rgba(0,0,0,0.5); } /* کاهش مارجین */
-        header p { margin-top: 2px; color: #93c5fd; font-size: 1em; } /* کاهش مارجین */
+        .logo { width: 95px; height: 95px; border-radius: 50%; object-fit: cover; border: 3px solid #38bdf8; margin-bottom: 10px; background: #fff; }
+        header h1 { margin: 5px 0 0 0; font-size: 2em; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        header p { margin-top: 5px; color: #93c5fd; font-size: 1.1em; }
 
         /* Containers & Cards */
-        .container { max-width: 950px; margin: 25px auto; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .container { max-width: 950px; margin: 25px auto; padding: 35px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         h2 { color: #1e3a8a; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-top: 0; }
+        h3 { color: #0f172a; margin-top: 25px; }
         
-        /* Bakhsh "Über uns" - اصلاح شده برای دیده شدن پس‌زمینه */
-        #about.container {
-            background-color: #f8fafc; /* تغییر به یک خاکستری بسیار ملایم متمایز */
-            border: 1px solid #e2e8f0; /* اضافه کردن حاشیه ظریف */
-        }
+        #about.container { background-color: #f8fafc; border: 1px solid #e2e8f0; }
+        .container:not(#about) { background-color: #fff; }
 
-        /* سایر کارت‌ها که سفید باقی می‌مانند */
-        .container:not(#about) {
-            background-color: #fff;
-        }
-
-        .fa-box { direction: rtl; text-align: right; font-family: Tahoma, Arial, sans-serif; background: #f1f5f9; padding: 18px; border-right: 4px solid #1e3a8a; border-radius: 6px; margin-top: 15px; }
+        .fa-box { direction: rtl; text-align: right; font-family: Tahoma, Arial, sans-serif; background: #f1f5f9; padding: 20px; border-right: 4px solid #1e3a8a; border-radius: 6px; margin-top: 15px; }
         
         /* Grid Section for Activities */
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
-        .card { background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; text-align: center; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 20px; }
+        .card { background: #f8fafc; padding: 22px; border-radius: 8px; border: 1px solid #e2e8f0; }
         .card h3 { color: #1e3a8a; margin-top: 0; }
 
         /* Table */
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
         table, th, td { border: 1px solid #cbd5e1; }
-        th, td { padding: 12px; text-align: left; }
+        th, td { padding: 14px; text-align: left; }
         th { background-color: #f1f5f9; color: #1e3a8a; }
 
         /* Legal Block */
@@ -65,7 +58,7 @@
     <nav>
         <a href="#about">Über uns</a>
         <a href="#activities">Angebote</a>
-        <a href="#events">Termine</a>
+        <a href="#events">Programme</a>
         <a href="#membership">Mitgliedschaft</a>
         <a href="#impressum">Impressum</a>
         <a href="#datenschutz">Datenschutz</a>
@@ -73,70 +66,76 @@
 
     <!-- Header / Hero -->
     <header>
-        <!-- تصویر لوگو (در صورت وجود logo.jpg نشان داده می‌شود) -->
         <img src="logo.jpg" alt="Ahlul-Bayt Logo" class="logo" onerror="this.style.display='none'">
         <h1>Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.)</h1>
         <p>Gemeinnütziger Verein in Leer (Ostfriesland)</p>
     </header>
 
-    <!-- Über uns - بخش اصلاح شده -->
+    <!-- Über uns -->
     <div class="container" id="about">
         <h2>Über uns / درباره ما</h2>
-        <p>Der Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.) fördert das kulturelle, religiöse und soziale Miteinander in Leer und Umgebung. Unsere Angebote richten sich an Familien, Jugendliche und alle Interessierten.</p>
+        <p>Der <strong>Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.)</strong> mit Sitz in Leer (Ostfriesland) ist eine gemeinnützige Initiative, die sich für das friedliche Zusammenleben, den interkulturellen Dialog und die Pflege religiöser sowie kultureller Werte einsetzt. Unser Verein steht Menschen aller Hintergründe offen und fördert insbesondere die Integration, Bildung und Jugendarbeit.</p>
         
         <div class="fa-box">
-            به وب‌سایت رسمی انجمن فرهنگی و مذهبی اهل‌بیت (ع) خوش آمدید. هدف ما ارتقای فعالیت‌های فرهنگی، مذهبی، آموزشی و ایجاد همبستگی و ارتباط میان‌فرهنگی در منطقه لیر و حومه است.
+            انجمن فرهنگی و مذهبی اهل‌بیت (ع) در لیر (استان اورتفریس‌لند)، نهادی است غیرانتفاعی که با هدف تحکیم ارزش‌های اسلامی، تعامل فرهنگی، ترویج صلح، دوستی و همزیستی مسالمت‌آمیز فعالیت می‌کند. ما تلاش می‌کنیم فضایی مناسب برای فعالیت‌های آموزشی، دینی و اجتماعی خانواده‌ها و نسل جوان فراهم کنیم.
         </div>
     </div>
 
-    <!-- Schwerpunkte / Bakhsh-ha - سفید باقی می‌ماند -->
+    <!-- Schwerpunkte -->
     <div class="container" id="activities">
-        <h2>Unsere Angebote & Schwerpunkte / خدمات و فعالیت‌ها</h2>
+        <h2>Unsere Schwerpunkte / حوزه‌های فعالیت</h2>
         <div class="grid-3">
             <div class="card">
                 <h3>Kultur & Religion</h3>
-                <p>Pflege religiöser Traditionen, Durchführung von Zeremonien und interkultureller Dialog.</p>
+                <p>Veranstaltung von islamischen Feier- und Gedenktagen, Koran-Rezitationskreisen, Vorträgen und interreligiösem Dialog.</p>
             </div>
             <div class="card">
-                <h3>Familie & Jugend</h3>
-                <p>Bildungs- und Freizeitangebote, Sprachförderung sowie Unterstützung für Jugendliche.</p>
+                <h3>Jugend & Bildung</h3>
+                <p>Förderung von Kindern und Jugendlichen durch Sprachunterricht, Nachhilfe, Freizeitangebote und Wertevermittlung.</p>
             </div>
             <div class="card">
-                <h3>Gemeinschaft</h3>
-                <p>Förderung des ehrenamtlichen Engagements und der sozialen Integration vor Ort.</p>
+                <h3>Soziales & Integration</h3>
+                <p>Unterstützung von Neuankömmlingen bei der Orientierung, Beratung, Stärkung des Ehrenamts und soziale Hilfsangebote vor Ort.</p>
             </div>
         </div>
     </div>
 
-    <!-- Veranstaltungen -->
+    <!-- Veranstaltungen & Programme -->
     <div class="container" id="events">
-        <h2>Veranstaltungen & Termine / برنامه‌ها</h2>
+        <h2>Reguläre Programme & Termine / برنامه‌ها و مناسبت‌ها</h2>
+        <p>Wir laden alle Interessierten herzlich zu unseren wöchentlichen und monatlichen Programmen ein:</p>
         <table>
             <tr>
-                <th>Datum</th>
-                <th>Veranstaltung</th>
-                <th>Ort</th>
+                <th>Wochentag / Zeit</th>
+                <th>Programm / Veranstaltung</th>
+                <th>Beschreibung</th>
             </tr>
             <tr>
-                <td>Wöchentlich (Fr.)</td>
-                <td>Kulturelles & Religiöses Treffen</td>
-                <td>Vereinsräume / Leer</td>
+                <td>Freitags (Abend)</td>
+                <td>Wöchentliches Gemeindetreffen</td>
+                <td>Gemeinsames Gebet, Koranunterricht und Vortrag zu ethischen und religiösen Themen.</td>
             </tr>
             <tr>
-                <td>Monatlich</td>
-                <td>Familien- und Jugendnachmittag</td>
-                <td>Leer (Ostfriesland)</td>
+                <td>Samstags / Nachmittags</td>
+                <td>Jugend- und Bildungskreis</td>
+                <td>Aktivitäten, Bildungsangebote und Treffen für Kinder und Jugendliche.</td>
+            </tr>
+            <tr>
+                <td>Monatlich / Nach Absprache</td>
+                <td>Spezielle Anlässe & Feiern</td>
+                <td>Gedenkfeيرات و مراسم مناسبتی اسلامی (اعحاد و مناسبت‌های ویژه اهل‌بیت علیهم السلام).</td>
             </tr>
         </table>
     </div>
 
     <!-- Mitgliedschaft -->
     <div class="container" id="membership">
-        <h2>Mitgliedschaft / عضویت</h2>
-        <p>Möchten Sie unseren Verein unterstützen und Mitglied werden? Wir freuen uns über jedes neue Mitglied!</p>
-        <p>Sie können den Antrag auf Mitgliedschaft formlos per E-Mail anfragen یا مستقیم با ایمیل زیر در تماس باشید.</p>
+        <h2>Mitgliedschaft & Mitwirken / عضویت در انجمن</h2>
+        <p>Möchten Sie unsere Arbeit aktiv unterstützen, Teil unserer Gemeinschaft werden oder den Verein mitgestalten? Wir freuen uns sehr über neue Mitglieder und Förderer.</p>
+        <p>Sie können den Aufnahmeantrag unkompliziert per E-Mail anfordern oder sich direkt bei unseren wöchentlichen Treffen an den Vorstand wenden.</p>
+        
         <div class="fa-box">
-            برای عضویت و حمایت از فعالیت‌های انجمن، می‌توانید درخواست خود را از طریق ایمیل زیر ارسال نمایید.
+            اگر مایل به پیوستن به انجمن و حمایت از اهداف فرهنگی و مذهبی آن هستید، می‌توانید درخواست عضویت خود را از طریق ایمیل برای ما ارسال کنید یا در برنامه‌های هفتگی حضوری با مسئولان انجمن گفتگو نمایید.
         </div>
     </div>
 
@@ -148,7 +147,7 @@
             Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.)<br>
             Vertreten durch den Vorstand<br>
             Sitz des Vereins: Leer (Ostfriesland)<br>
-            E-Mail: ahlulbayt-leer@gmx.de
+            E-Mail: (به زودی ایمیل رسمی انجمن درج خواهد شد / Aktive E-Mail folgt)
         </p>
         <p><strong>Registereintragung:</strong><br>
         Eintragung im Vereinsregister (in Gründung / i.Gr.). Registergericht: Amtsgericht Aurich / Oldenburg.</p>
