@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,11 @@
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f1f5f9; color: #1e293b; line-height: 1.7; }
         
         /* Navbar */
-        nav { background: #0f172a; position: sticky; top: 0; z-index: 100; text-align: center; padding: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-        nav a { color: #f8fafc; text-decoration: none; margin: 0 10px; font-weight: 600; font-size: 0.9em; transition: 0.3s; white-space: nowrap; }
+        nav { background: #0f172a; position: sticky; top: 0; z-index: 100; text-align: center; padding: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px; }
+        nav a { color: #f8fafc; text-decoration: none; margin: 0 5px; font-weight: 600; font-size: 0.9em; transition: 0.3s; white-space: nowrap; }
         nav a:hover { color: #38bdf8; }
+        .lang-btn { background: #1e3a8a; border: 1px solid #38bdf8; color: #fff; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.85em; transition: 0.3s; }
+        .lang-btn:hover { background: #38bdf8; color: #0f172a; }
 
         /* Header / Hero Section */
         header { 
@@ -45,6 +47,10 @@
         th, td { padding: 14px; text-align: left; }
         th { background-color: #f1f5f9; color: #1e3a8a; }
 
+        /* Responsive Media Embeds */
+        .media-container { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-top: 10px; background: #000; }
+        .media-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
         /* Legal Block */
         .legal-block { font-size: 0.9em; color: #475569; }
 
@@ -56,25 +62,28 @@
 
     <!-- Navigation -->
     <nav>
-        <a href="#about">Über uns</a>
-        <a href="#activities">Angebote</a>
-        <a href="#events">Programme</a>
-        <a href="#membership">Mitgliedschaft</a>
-        <a href="#impressum">Impressum</a>
-        <a href="#datenschutz">Datenschutz</a>
+        <a href="#about" class="nav-about">Über uns</a>
+        <a href="#activities" class="nav-activities">Angebote</a>
+        <a href="#events" class="nav-events">Programme</a>
+        <a href="#library" class="nav-library">Kibliothek</a>
+        <a href="#shop" class="nav-shop">Kulturshop</a>
+        <a href="#membership" class="nav-membership">Mitgliedschaft</a>
+        <a href="#impressum" class="nav-impressum">Impressum</a>
+        <a href="#datenschutz" class="nav-datenschutz">Datenschutz</a>
+        <button class="lang-btn" onclick="toggleLanguage()">🇬🇧 EN / DE</button>
     </nav>
 
     <!-- Header / Hero -->
     <header>
         <img src="logo.jpg" alt="Ahlul-Bayt Logo" class="logo" onerror="this.style.display='none'">
         <h1>Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.)</h1>
-        <p>Gemeinnütziger Verein in Leer (Ostfriesland)</p>
+        <p class="header-sub">Gemeinnütziger Verein in Leer (Ostfriesland)</p>
     </header>
 
     <!-- Über uns -->
     <div class="container" id="about">
-        <h2>Über uns / درباره ما</h2>
-        <p>Der <strong>Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.)</strong> mit Sitz in Leer (Ostfriesland) ist eine gemeinnützige und unparteiische Initiative, die sich für das friedliche Zusammenleben, den interkulturellen Dialog, Sprachunterricht und die Pflege religiöser sowie kultureller Werte einsetzt. Unser Verein steht Menschen aller Hintergründe offen und fördert insbesondere die Integration, Bildung und Jugendarbeit.</p>
+        <h2 class="h-about">Über uns / درباره ما</h2>
+        <p class="p-about-desc">Der <strong>Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.)</strong> mit Sitz in Leer (Ostfriesland) ist eine gemeinnützige und unparteiische Initiative, die sich für das friedliche Zusammenleben, den interkulturellen Dialog, Sprachunterricht und die Pflege religiöser sowie kultureller Werte einsetzt. Unser Verein steht Menschen aller Hintergründe offen und fördert insbesondere die Integration, Bildung und Jugendarbeit.</p>
         
         <div class="fa-box">
             هیئت اهل‌البیت علیهم السلام در شهر لیر (اوست‌فریزلند) آلمان، نهادی است غیرانتفاعی و غیر سیاسی، که با هدف تحکیم ارزش‌های اسلامی، بزرگداشت ایام‌الله‌ها و مناسبت‌های اسلامی و شیعی اعم از اعیاد، شهادت‌ها و میلادهای آل‌الله، و با هدف تعامل فرهنگی و برگزاری کلاس فارسی، قرآن برای نونهالان، ترویج صلح، دوستی و همزیستی مسالمت‌آمیز فعالیت می‌کند. ما تلاش می‌کنیم فضایی مناسب برای فعالیت‌های آموزشی، دینی و اجتماعی خانواده‌ها و نسل جوان فراهم کنیم.
@@ -83,34 +92,33 @@
 
     <!-- Schwerpunkte -->
     <div class="container" id="activities">
-        <h2>Unsere Schwerpunkte / حوزه‌های فعالیت</h2>
+        <h2 class="h-activities">Unsere Schwerpunkte / حوزه‌های فعالیت</h2>
         <div class="grid-3">
             <div class="card">
-                <h3>Kultur & Religion</h3>
-                <p>Veranstaltung von islamischen Feier- und Gedenktagen, Koran-Rezitationskreisen, Vorträgen und interreligiösem Dialog.</p>
+                <h3 class="card1-title">Kultur & Religion</h3>
+                <p class="card1-desc">Veranstaltung von islamischen Feier- und Gedenktagen, Koran-Rezitationskreisen, Vorträgen und interreligiösem Dialog.</p>
             </div>
             <div class="card">
-                <h3>Jugend & Bildung</h3>
-                <p>Förderung von Kindern und Jugendlichen durch Persisch- und Koranunterricht, Nachhilfe, Freizeitangebote und Wertevermittlung.</p>
+                <h3 class="card2-title">Jugend & Bildung</h3>
+                <p class="card2-desc">Förderung von Kindern und Jugendlichen durch Persisch- und Koranunterricht, Nachhilfe, Freizeitangebote und Wertevermittlung.</p>
             </div>
             <div class="card">
-                <h3>Soziales & Integration</h3>
-                <p>Unterstützung von Neuankömmlingen bei der Orientierung, Beratung, Stärkung des Ehrenamts und soziale Hilfsangebote vor Ort.</p>
+                <h3 class="card3-title">Soziales & Integration</h3>
+                <p class="card3-desc">Unterstützung von Neuankömmlingen bei der Orientierung, Beratung, Stärkung des Ehrenamts und soziale Hilfsangebote vor Ort.</p>
             </div>
         </div>
     </div>
 
     <!-- Veranstaltungen & Programme -->
-   <!-- Veranstaltungen & Programme -->
     <div class="container" id="events">
-        <h2>Reguläre Programme & Termine / برنامه‌ها و مناسبت‌ها</h2>
-        <p>Wir laden alle Interessierten herzlich zu unseren wöchentlichen und monatlichen Programmen ein:</p>
+        <h2 class="h-events">Reguläre Programme & Termine / برنامه‌ها و مناسبت‌ها</h2>
+        <p class="p-events-desc">Wir laden alle Interessierten herzlich zu unseren wöchentlichen und monatlichen Programmen ein:</p>
         
         <table>
             <tr>
-                <th>Wochentag / Zeit</th>
-                <th>Programm / Veranstaltung</th>
-                <th>Beschreibung</th>
+                <th class="th-time">Wochentag / Zeit</th>
+                <th class="th-prog">Programm / Veranstaltung</th>
+                <th class="th-desc">Beschreibung</th>
             </tr>
             <tr>
                 <td>Freitags (Abend)</td>
@@ -129,45 +137,106 @@
             </tr>
         </table>
 
-        <!-- Fotos der Veranstaltungen (photo1.jpg bis photo7.jpg) -->
-        <!-- Fotos der Veranstaltungen -->
-        <h3 style="margin-top: 30px; color: #1e3a8a;">Impressionen / گزارش تصویری مناسبت‌ها</h3>
-        
+        <!-- Impressionen -->
+        <h3 style="margin-top: 30px; color: #1e3a8a;" class="h-impressions">Impressionen / گزارش تصویری مناسبت‌ها</h3>
         <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 15px;">
             <div style="text-align: center;">
-                <a href="photo1.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;">مشاهده تصویر ۱ / Bild 1 anzeigen</a>
-                <br><img src="photo1.jpeg" alt="Veranstaltung 1" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;">
+                <a href="photo1.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;" class="lnk-photo1">مشاهده تصویر ۱ / Bild 1 anzeigen</a>
+                <br><img src="photo1.jpeg" alt="Veranstaltung 1" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;" onerror="this.style.display='none'">
             </div>
             <div style="text-align: center;">
-                <a href="photo2.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;">مشاهده تصویر ۲ / Bild 2 anzeigen</a>
-                <br><img src="photo2.jpeg" alt="Veranstaltung 2" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;">
+                <a href="photo2.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;" class="lnk-photo2">مشاهده تصویر ۲ / Bild 2 anzeigen</a>
+                <br><img src="photo2.jpeg" alt="Veranstaltung 2" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;" onerror="this.style.display='none'">
             </div>
             <div style="text-align: center;">
-                <a href="photo3.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;">مشاهده تصویر ۳ / Bild 3 anzeigen</a>
-                <br><img src="photo3.jpeg" alt="Veranstaltung 3" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;">
+                <a href="photo3.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;" class="lnk-photo3">مشاهده تصویر ۳ / Bild 3 anzeigen</a>
+                <br><img src="photo3.jpeg" alt="Veranstaltung 3" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;" onerror="this.style.display='none'">
             </div>
             <div style="text-align: center;">
-                <a href="photo4.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;">مشاهده تصویر ۴ / Bild 4 anzeigen</a>
-                <br><img src="photo4.jpeg" alt="Veranstaltung 4" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;">
+                <a href="photo4.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;" class="lnk-photo4">مشاهده تصویر ۴ / Bild 4 anzeigen</a>
+                <br><img src="photo4.jpeg" alt="Veranstaltung 4" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;" onerror="this.style.display='none'">
             </div>
             <div style="text-align: center;">
-                <a href="photo5.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;">مشاهده تصویر ۵ / Bild 5 anzeigen</a>
-                <br><img src="photo5.jpeg" alt="Veranstaltung 5" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;">
+                <a href="photo5.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;" class="lnk-photo5">مشاهده تصویر ۵ / Bild 5 anzeigen</a>
+                <br><img src="photo5.jpeg" alt="Veranstaltung 5" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;" onerror="this.style.display='none'">
             </div>
             <div style="text-align: center;">
-                <a href="photo6.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;">مشاهده تصویر ۶ / Bild 6 anzeigen</a>
-                <br><img src="photo6.jpeg" alt="Veranstaltung 6" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;">
+                <a href="photo6.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;" class="lnk-photo6">مشاهده تصویر ۶ / Bild 6 anzeigen</a>
+                <br><img src="photo6.jpeg" alt="Veranstaltung 6" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;" onerror="this.style.display='none'">
             </div>
             <div style="text-align: center;">
-                <a href="photo7.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;">مشاهده تصویر ۷ / Bild 7 anzeigen</a>
-                <br><img src="photo7.jpeg" alt="Veranstaltung 7" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;">
+                <a href="photo7.jpeg" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;" class="lnk-photo7">مشاهده تصویر ۷ / Bild 7 anzeigen</a>
+                <br><img src="photo7.jpeg" alt="Veranstaltung 7" style="width:100%; max-width:800px; border-radius:8px; margin-top:10px;" onerror="this.style.display='none'">
             </div>
         </div>
+    </div>
+
+    <!-- کتابخانه و رسانه (Library & Media) -->
+    <div class="container" id="library">
+        <h2 class="h-library">Mediathek & Bibliothek / کتابخانه و رسانه</h2>
+        <p class="p-library-desc">Entdecken Sie unsere Videos, YouTube-Kanäle, Vorträge und Audioaufnahmen.</p>
+        
+        <div class="grid-3">
+            <div class="card">
+                <h3>YouTube Kanal</h3>
+                <p>Besuchen Sie unseren offiziellen YouTube-Kanal für Vorträge und Live-Streams.</p>
+                <!-- جایگزین کردن لینک یوتیوب انجمن -->
+                <a href="https://www.youtube.com/@YOUR_CHANNEL" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;">Zum YouTube-Kanal &rarr;</a>
+            </div>
+            <div class="card">
+                <h3>Vortrag / Video</h3>
+                <p>Ausgewählte Videoaufnahme aus unseren Programmen:</p>
+                <!-- جاسازی ویدیو از یوتیوب با استفاده از Embed Link -->
+                <div class="media-container">
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Audio / Koran</h3>
+                <p>Anhören von Koranrezitationen und Audiomaterial:</p>
+                <audio controls style="width: 100%; margin-top: 15px;">
+                    <source src="audio-sample.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+
+    <!-- محصولات فرهنگی و فروش (Cultural Shop) -->
+    <div class="container" id="shop">
+        <h2 class="h-shop">Kulturshop & Produkte / محصولات فرهنگی و فروش</h2>
+        <p class="p-shop-desc">Hier finden Sie kulturelle Artikel, Bücher, Kinderlehrmaterialien und religiöse Schriften des Vereins.</p>
+        
+        <div class="grid-3">
+            <div class="card">
+                <img src="shop1.jpg" alt="Produkt 1" style="width:100%; border-radius:6px;" onerror="this.style.display='none'">
+                <h3>Koran & Übersetzungen</h3>
+                <p>Übersetzungen des Heiligen Korans (Deutsch/Persisch).</p>
+                <p><strong>Preis: Auf Anfrage</strong></p>
+                <a href="mailto:ahlulbayt-leer@gmx.de?subject=Bestellung%20Koran" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Bestellen / سفارش</a>
+            </div>
+            <div class="card">
+                <img src="shop2.jpg" alt="Produkt 2" style="width:100%; border-radius:6px;" onerror="this.style.display='none'">
+                <h3>Lehrmaterial Persisch</h3>
+                <p>Kinderbücher und Lernhefte für den persischen Sprachunterricht.</p>
+                <p><strong>Preis: Auf Anfrage</strong></p>
+                <a href="mailto:ahlulbayt-leer@gmx.de?subject=Bestellung%20Lehrmaterial" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Bestellen / سفارش</a>
+            </div>
+            <div class="card">
+                <img src="shop3.jpg" alt="Produkt 3" style="width:100%; border-radius:6px;" onerror="this.style.display='none'">
+                <h3>Islamische Kultur & Kalender</h3>
+                <p>Wandkalender und informative Broschüren zu islamischen Anlässen.</p>
+                <p><strong>Preis: Auf Anfrage</strong></p>
+                <a href="mailto:ahlulbayt-leer@gmx.de?subject=Bestellung%20Kalender" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Bestellen / سفارش</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Mitgliedschaft -->
     <div class="container" id="membership">
-        <h2>Mitgliedschaft & Mitwirken / عضویت در انجمن</h2>
-        <p>Möchten Sie unsere Arbeit aktiv unterstützen, Teil unserer Gemeinschaft werden oder den Verein mitgestalten? Wir freuen uns sehr über neue Mitglieder und Förderer.</p>
-        <p>Sie können den Aufnahmeantrag unkompliziert per E-Mail an <strong>ahlulbayt-leer@gmx.de</strong> anfordern oder sich direkt bei unseren Treffen an den Vorstand wenden.</p>
+        <h2 class="h-membership">Mitgliedschaft & Mitwirken / عضویت در انجمن</h2>
+        <p class="p-member-desc">Möchten Sie unsere Arbeit aktiv unterstützen, Teil unserer Gemeinschaft werden oder den Verein mitgestalten? Wir freuen uns sehr über neue Mitglieder und Förderer.</p>
+        <p class="p-member-desc2">Sie können den Aufnahmeantrag unkompliziert per E-Mail an <strong>ahlulbayt-leer@gmx.de</strong> anfordern oder sich direkt bei unseren Treffen an den Vorstand wenden.</p>
         
         <div class="fa-box">
             برای عضویت، حمایت و مشارکت در فعالیت‌های انجمن، می‌توانید درخواست خود را از طریق ایمیل زیر ارسال نمایید:<br>
@@ -175,25 +244,8 @@
         </div>
     </div>
 
-<!-- Galerie -->
-    <div class="container" id="gallery">
-        <h2>Galerie / گالری تصاویر</h2>
-        <div class="grid-3">
-            <div>
-                <img src="photo1.jpg" alt="Veranstaltung" style="width:100%; border-radius:8px;" onerror="this.style.display='none'">
-                <p style="text-align:center; font-size:0.9em;">برنامه هفتگی / Wöchentliches Treffen</p>
-            </div>
-            <div>
-                <img src="photo2.jpg" alt="Kultur" style="width:100%; border-radius:8px;" onerror="this.style.display='none'">
-                <p style="text-align:center; font-size:0.9em;">کلاس‌های قرآن و فارسی / Unterricht</p>
-            </div>
-            <div>
-                <img src="photo3.jpg" alt="Feier" style="width:100%; border-radius:8px;" onerror="this.style.display='none'">
-                <p style="text-align:center; font-size:0.9em;">مراسم مناسبت‌ها / Feierlichkeiten</p>
-            </div>
-        </div>
-    </div>
-    
+    <!-- گالری حذف شد و تصاویر گالری با موفقیت به بخش گزارش تصویری (Impressionen) در زیر برنامه‌ها منتقل و اصلاح شدند -->
+
     <!-- Impressum -->
     <div class="container legal-block" id="impressum">
         <h2>Impressum</h2>
@@ -226,5 +278,55 @@
         <p>&copy; 2026 Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.) | Alle Rechte vorbehalten.</p>
     </footer>
 
+    <!-- Script جهت تغییر زبان (آلمانی / انگلیسی) -->
+    <script>
+        let currentLang = 'de';
+        function toggleLanguage() {
+            currentLang = currentLang === 'de' ? 'en' : 'de';
+            const root = document.getElementById('html-root');
+            root.lang = currentLang;
+
+            if (currentLang === 'en') {
+                document.querySelector('.nav-about').innerText = 'About Us';
+                document.querySelector('.nav-activities').innerText = 'Activities';
+                document.querySelector('.nav-events').innerText = 'Programs';
+                document.querySelector('.nav-library').innerText = 'Library';
+                document.querySelector('.nav-shop').innerText = 'Shop';
+                document.querySelector('.nav-membership').innerText = 'Membership';
+                document.querySelector('.nav-impressum').innerText = 'Impressum';
+                document.querySelector('.nav-datenschutz').innerText = 'Privacy';
+
+                document.querySelector('.header-sub').innerText = 'Non-profit association in Leer (East Frisia)';
+                document.querySelector('.h-about').innerText = 'About Us';
+                document.querySelector('.p-about-desc').innerHTML = 'The <strong>Ahlul-Bayt Culture and Religion Association e.V. (i.Gr.)</strong> based in Leer (East Frisia) is a non-profit and impartial initiative that campaigns for peaceful coexistence, intercultural dialogue, language teaching and the cultivation of religious and cultural values. Our association is open to people of all backgrounds and particularly promotes integration, education and youth work.';
+                
+                document.querySelector('.h-activities').innerText = 'Our Focus Areas';
+                document.querySelector('.card1-title').innerText = 'Culture & Religion';
+                document.querySelector('.card1-desc').innerText = 'Organization of Islamic celebration and commemoration days, Quran recitation circles, lectures and interreligious dialogue.';
+                document.querySelector('.card2-title').innerText = 'Youth & Education';
+                document.querySelector('.card2-desc').innerText = 'Support for children and young people through Persian and Quran lessons, tutoring, leisure activities and values education.';
+                document.querySelector('.card3-title').innerText = 'Social & Integration';
+                document.querySelector('.card3-desc').innerText = 'Support for newcomers with orientation, advice, strengthening volunteering and local social aid offers.';
+
+                document.querySelector('.h-events').innerText = 'Regular Programs & Schedule';
+                document.querySelector('.p-events-desc').innerText = 'We cordially invite everyone interested to our weekly and monthly programs:';
+                document.querySelector('.th-time').innerText = 'Weekday / Time';
+                document.querySelector('.th-prog').innerText = 'Program / Event';
+                document.querySelector('.th-desc').innerText = 'Description';
+
+                document.querySelector('.h-library').innerText = 'Media & Library';
+                document.querySelector('.p-library-desc').innerText = 'Explore our videos, YouTube channels, lectures and audio recordings.';
+
+                document.querySelector('.h-shop').innerText = 'Cultural Shop & Products';
+                document.querySelector('.p-shop-desc').innerText = 'Here you will find cultural items, books, children educational materials and religious writings of the association.';
+
+                document.querySelector('.h-membership').innerText = 'Membership & Participation';
+                document.querySelector('.p-member-desc').innerText = 'Would you like to actively support our work, become part of our community or help shape the association? We look forward to new members and supporters.';
+                document.querySelector('.p-member-desc2').innerHTML = 'You can easily request the membership application by email at <strong>ahlulbayt-leer@gmx.de</strong> or contact the board directly at our meetings.';
+            } else {
+                location.reload(); // بازگشت به حالت پیش‌فرض (آلمانی)
+            }
+        }
+    </script>
 </body>
 </html>
