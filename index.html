@@ -57,7 +57,8 @@
         /* Footer */     
         footer { text-align: center; padding: 20px; background: #0f172a; color: #94a3b8; font-size: 0.9em; margin-top: 40px; }     
     </style> 
-</head> <body>     
+</head> 
+<body>     
     <!-- Navigation -->     
     <nav>     
         <a href="#about" class="nav-about">Über uns</a>     
@@ -277,9 +278,15 @@
     <div class="container" id="membership">     
         <h2 class="h-membership">Mitgliedschaft & Mitwirken / عضویت در انجمن</h2>     
         <p class="p-member-desc">Möchten Sie unsere Arbeit aktiv unterstützen, Teil unserer Gemeinschaft werden oder den Verein mitgestalten? Wir freuen uns sehr über neue Mitglieder und Förderer.</p>     
-        <p class="p-member-desc2">Sie können den Aufnahmeantrag unkompliziert per E-Mail an <strong>ahlulbayt-leer@gmx.de</strong> anfordern oder sich direkt bei unseren Treffen an den Vorstand wenden.</p>     
+        <p class="p-member-desc2">Sie können den Aufnahmeantrag unkompliziert herunterladen, ausfüllen und per E-Mail an <strong>ahlulbayt-leer@gmx.de</strong> senden oder sich direkt bei unseren Treffen an den Vorstand wenden.</p>     
+        
+        <!-- دکمه دانلود فرم PDF عضویت -->
+        <div style="margin: 20px 0; text-align: center;">
+            <a href="Aufnahmeantrag auf Vereinsmitgliedschaft.pdf" target="_blank" class="lang-btn" style="display: inline-block; text-decoration: none; padding: 10px 20px; font-size: 1em;">📥 Aufnahmeantrag (PDF) herunterladen / دانلود فرم عضویت</a>
+        </div>
+
         <div class="fa-box">     
-            برای عضویت، حمایت و مشارکت در فعالیت‌های انجمن، می‌توانید درخواست خود را از طریق ایمیل زیر ارسال نمایید:<br>     
+            برای عضویت، حمایت و مشارکت در فعالیت‌های انجمن، می‌توانید فرم عضویت را دانلود کرده و پس از تکمیل، به ایمیل زیر ارسال نمایید:<br>     
             <strong>E-Mail: ahlulbayt-leer@gmx.de</strong>     
         </div>     
     </div>     
@@ -356,7 +363,7 @@
                 document.querySelector('.p-shop-desc').innerText = 'Here you will find cultural items, books, children educational materials and religious writings of the association.';     
                 document.querySelector('.h-membership').innerText = 'Membership & Participation';     
                 document.querySelector('.p-member-desc').innerText = 'Would you like to actively support our work, become part of our community or help shape the association? We look forward to new members and supporters.';     
-                document.querySelector('.p-member-desc2').innerHTML = 'You can easily request the membership application by email at <strong>ahlulbayt-leer@gmx.de</strong> or contact the board directly at our meetings.';     
+                document.querySelector('.p-member-desc2').innerHTML = 'You can easily download the membership application, fill it out and send it by email to <strong>ahlulbayt-leer@gmx.de</strong> or contact the board directly at our meetings.';     
             } else {     
                 location.reload(); // بازگشت به حالت پیش‌فرض (آلمانی)     
             }     
