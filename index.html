@@ -170,16 +170,22 @@
     </div>     
 
     <!-- کتابخانه و رسانه (Library & Media) -->     
-   <!-- کتابخانه و رسانه (Library & Media) -->     
+  <!-- کتابخانه و رسانه (Library & Media) -->     
     <div class="container" id="library">     
         <h2 class="h-library">Mediathek & Bibliothek / کتابخانه و رسانه</h2>     
         <p class="p-library-desc">Entdecken Sie unsere Videos, YouTube-Kanäle, Vorträge und Audioaufnahmen.</p>     
-        <div class="grid-3">     
+        
+        <!-- تغییر grid-3 به یک استایل گرید ۴تایی یا اضافه کردن کارت چهارم داخل همین بخش -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 20px;">     
+            
+            <!-- ۱. کارت یوتیوب -->
             <div class="card">     
                 <h3>YouTube Kanal</h3>     
                 <p>Besuchen Sie unseren offiziellen YouTube-Kanal für Vorträge und Live-Streams.</p>     
                 <a href="https://www.youtube.com/@Leer-e.V" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;">Zum YouTube-Kanal &rarr;</a>     
             </div>     
+
+            <!-- ۲. کارت ویدیو -->
             <div class="card">     
                 <h3>Vortrag / Video</h3>     
                 <p>Ausgewählte Videoaufnahme aus unseren Programmen:</p>     
@@ -187,6 +193,8 @@
                     <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>     
                 </div>     
             </div>     
+
+            <!-- ۳. کارت صوت -->
             <div class="card">     
                 <h3>Audio / Koran</h3>     
                 <p>Anhören von Koranrezitationen und Audiomaterial:</p>     
@@ -195,16 +203,16 @@
                     Your browser does not support the audio element.     
                 </audio>     
             </div>     
-        </div>     
-    </div>  
 
-    <!-- کارت تلگرام (جدید) -->
+            <!-- ۴. کارت تلگرام (اکنون کاملاً داخل کادر و منظم در کنار بقیه قرار می‌گیرد) -->
             <div class="card">     
                 <h3>Telegram Kanal</h3>     
                 <p>Besuchen Sie unseren Telegram-Kanal für tagesaktuelle Beiträge und den Heiligen Koran.</p>     
                 <a href="https://t.me/HollyQuranFarsi" target="_blank" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Zum Telegram-Kanal / کانال تلگرام</a>     
-            </div>
+            </div>     
 
+        </div>     
+    </div>
     <!-- 8 پوشه / دسته‌بندی جدید (8 Folders / Categories) -->     
     <div class="container" id="folders">     
         <h2 class="h-folders">Digitale Kategorien & Schriften / دسته‌بندی‌های کتب و قرآن‌ها</h2>     
