@@ -12,7 +12,7 @@
         nav { background: #0f172a; position: sticky; top: 0; z-index: 100; text-align: center; padding: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.3); display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px; }      
         nav a { color: #f8fafc; text-decoration: none; margin: 0 5px; font-weight: 600; font-size: 0.9em; transition: 0.3s; white-space: nowrap; }      
         nav a:hover { color: #38bdf8; }      
-        .lang-btn { background: #1e3a8a; border: 1px solid #38bdf8; color: #fff; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.85em; transition: 0.3s; }      
+        .lang-btn { background: #1e3a8a; border: 1px solid #38bdf8; color: #fff; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.85em; transition: 0.3s; display: inline-block; text-decoration: none; text-align: center; }      
         .lang-btn:hover { background: #38bdf8; color: #0f172a; }      
         
         /* Header / Hero Section */      
@@ -36,9 +36,9 @@
         
         .fa-box { direction: rtl; text-align: right; font-family: Tahoma, Arial, sans-serif; background: #f1f5f9; padding: 20px; border-right: 4px solid #1e3a8a; border-radius: 6px; margin-top: 15px; }      
         
-        /* Grid Section for Activities */      
+        /* Grid Section for Activities & Shop */      
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 20px; }      
-        .card { background: #f8fafc; padding: 22px; border-radius: 8px; border: 1px solid #e2e8f0; }      
+        .card { background: #f8fafc; padding: 22px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; justify-content: space-between; }      
         .card h3 { color: #1e3a8a; margin-top: 0; }      
         
         /* Table */      
@@ -177,22 +177,16 @@
         <p class="p-library-desc">Entdecken Sie unsere Videos, YouTube-Kanäle, Vorträge, Audioaufnahmen und Koranübersetzungen in verschiedenen Sprachen.</p>      
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 20px;">      
-            
-            <!-- ۱. کارت یوتیوب -->
             <div class="card">      
                 <h3>YouTube Kanal</h3>      
                 <p>Besuchen Sie unseren offiziellen YouTube-Kanal für Vorträge und Live-Streams.</p>      
                 <a href="https://www.youtube.com/@Leer-e.V" target="_blank" style="color: #1e3a8a; font-weight: bold; text-decoration: underline;">Zum YouTube-Kanal &rarr;</a>      
             </div>      
-
-            <!-- ۲. کارت تلگرام -->
             <div class="card">      
                 <h3>Telegram Kanal</h3>      
                 <p>Besuchen Sie unseren Telegram-Kanal für tagesaktuelle Beiträge und den Heiligen Koran.</p>      
-                <a href="https://t.me/HollyQuranFarsi" target="_blank" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Zum Telegram-Kanal / کانال تلگرام</a>      
+                <a href="https://t.me/HollyQuranFarsi" target="_blank" class="lang-btn" style="margin-top:10px;">Zum Telegram-Kanal / کانال تلگرام</a>      
             </div>      
-
-            <!-- ۳. کارت صوت / قرآن -->
             <div class="card">      
                 <h3>Audio / Koran</h3>      
                 <p>Anhören von Koranrezitationen und Audiomaterial:</p>      
@@ -201,64 +195,50 @@
                     Your browser does not support the audio element.      
                 </audio>      
             </div>      
-
         </div>      
 
-        <!-- بخش نمایش تصاویر کتاب‌ها و قرآن‌های چندزبانه -->
         <h3 style="margin-top: 40px; color: #1e3a8a;" class="h-library-books">Mehrsprachige Koranausgaben / قرآن‌ها و کتاب‌های ترجمه‌شده</h3>
         <p>Der Heilige Koran (Arabisch) und Ausgaben in weiteren Sprachen und Literatur.</p>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; text-align: center;">
-            
-            <!-- قرآن عربی -->
             <div class="card">
                 <img src="photo.arabi1.jpeg" alt="Al-Quran Al-Kareem (Arabic)" style="width:100%; border-radius:6px; height: 160px; object-fit: cover;" onerror="this.style.display='none'">
                 <p style="font-size: 0.9em; margin-top: 8px; font-weight: bold;">القرآن الكريم (Arabic)</p>
             </div>
-
             <div class="card">
                 <img src="photo.all.jpeg" alt="Koran Sammlung" style="width:100%; border-radius:6px; height: 160px; object-fit: cover;" onerror="this.style.display='none'">
                 <p style="font-size: 0.9em; margin-top: 8px; font-weight: bold;">Gesamtbestand / مجموعه کتاب‌ها</p>
             </div>
-
             <div class="card">
                 <img src="a1 (2).jpeg" alt="The Quran (English)" style="width:100%; border-radius:6px; height: 160px; object-fit: cover;" onerror="this.style.display='none'">
                 <p style="font-size: 0.9em; margin-top: 8px; font-weight: bold;">The Quran (English)</p>
             </div>
-
             <div class="card">
                 <img src="a2 (3).jpeg" alt="Der Koran (German)" style="width:100%; border-radius:6px; height: 160px; object-fit: cover;" onerror="this.style.display='none'">
                 <p style="font-size: 0.9em; margin-top: 8px; font-weight: bold;">Der Koran (German)</p>
             </div>
-
             <div class="card">
                 <img src="a2 (2).jpeg" alt="Le Coran (French)" style="width:100%; border-radius:6px; height: 160px; object-fit: cover;" onerror="this.style.display='none'">
                 <p style="font-size: 0.9em; margin-top: 8px; font-weight: bold;">Le Coran (French)</p>
             </div>
-
             <div class="card">
                 <img src="a1 (5).jpeg" alt="El Corán (Spanish)" style="width:100%; border-radius:6px; height: 160px; object-fit: cover;" onerror="this.style.display='none'">
                 <p style="font-size: 0.9em; margin-top: 8px; font-weight: bold;">El Corán (Spanish)</p>
             </div>
-
             <div class="card">
                 <img src="a1 (4).jpeg" alt="Russian Quran" style="width:100%; border-radius:6px; height: 160px; object-fit: cover;" onerror="this.style.display='none'">
                 <p style="font-size: 0.9em; margin-top: 8px; font-weight: bold;">Коран (Russian)</p>
             </div>
-
             <div class="card">
                 <img src="a1 (3).jpeg" alt="Alcorão Sagrado (Portuguese)" style="width:100%; border-radius:6px; height: 160px; object-fit: cover;" onerror="this.style.display='none'">
                 <p style="font-size: 0.9em; margin-top: 8px; font-weight: bold;">Alcorão (Portuguese)</p>
             </div>
-
             <div class="card">
                 <img src="a1.jpeg" alt="Ali Ibn Abi Talib (Kids)" style="width:100%; border-radius:6px; height: 160px; object-fit: cover;" onerror="this.style.display='none'">
                 <p style="font-size: 0.9em; margin-top: 8px; font-weight: bold;">Ali Ibn Abi Talib (Kids)</p>
             </div>
-
         </div>
 
-        <!-- ویدیو -->
         <div class="card" style="margin-top: 30px;">      
             <h3>Vortrag / Video</h3>      
             <p>Ausgewählte Videoaufnahme aus unseren Programmen:</p>      
@@ -268,7 +248,7 @@
         </div>      
     </div>
 
-    <!-- 8 پوشه / دسته‌بندی جدید (8 Folders / Categories) -->      
+    <!-- 8 پوشه / دسته‌بندی جدید -->      
     <div class="container" id="folders">      
         <h2 class="h-folders">Digitale Kategorien & Schriften / دسته‌بندی‌های کتب و قرآن‌ها</h2>      
         <p class="p-folders-desc">Wählen Sie einen Bereich aus, um zu den entsprechenden Dokumenten und Bildern zu gelangen:</p>      
@@ -276,84 +256,99 @@
             <div class="card">      
                 <h3 class="folder1-title">قرآن عربی / Arabischer Koran</h3>      
                 <p class="folder1-desc">Originaler arabischer Koran Text und Schriften.</p>      
-                <a href="quran-arabic/index.html" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Öffnen / ورود به پوشه</a>      
+                <a href="quran-arabic/index.html" class="lang-btn" style="margin-top:10px;">Öffnen / ورود به پوشه</a>      
             </div>      
             <div class="card">      
                 <h3 class="folder2-title">قرآن- آلمانی / Deutscher Koran</h3>      
                 <p class="folder2-desc">Koranübersetzung in deutscher Sprache.</p>      
-                <a href="quran-german/index.html" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Öffnen / ورود به پوشه</a>      
+                <a href="quran-german/index.html" class="lang-btn" style="margin-top:10px;">Öffnen / ورود به پوشه</a>      
             </div>      
             <div class="card">      
                 <h3 class="folder3-title">قرآن- انگلیسی / Englischer Koran</h3>      
                 <p class="folder3-desc">English translation of the Holy Quran.</p>      
-                <a href="quran-english/index.html" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Öffnen / ورود به پوشه</a>      
+                <a href="quran-english/index.html" class="lang-btn" style="margin-top:10px;">Öffnen / ورود به پوشه</a>      
             </div>      
             <div class="card">      
                 <h3 class="folder4-title">قرآن- فرانسوی / Französischer Koran</h3>      
                 <p class="folder4-desc">Traduction du Coran en français.</p>      
-                <a href="quran-french/index.html" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Öffnen / ورود به پوشه</a>      
+                <a href="quran-french/index.html" class="lang-btn" style="margin-top:10px;">Öffnen / ورود به پوشه</a>      
             </div>      
             <div class="card">      
                 <h3 class="folder5-title">قرآن- اسپانیایی / Spanischer Koran</h3>      
                 <p class="folder5-desc">Traducción del Sagrado Corán al español.</p>      
-                <a href="quran-spanish/index.html" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Öffnen / ورود به پوشه</a>      
+                <a href="quran-spanish/index.html" class="lang-btn" style="margin-top:10px;">Öffnen / ورود به پوشه</a>      
             </div>      
             <div class="card">      
                 <h3 class="folder6-title">قرآن- روسی / Russischer Koran</h3>      
                 <p class="folder6-desc">Перевод Священного Корана на русский язык.</p>      
-                <a href="quran-russian/index.html" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Öffnen / ورود به پوشه</a>      
+                <a href="quran-russian/index.html" class="lang-btn" style="margin-top:10px;">Öffnen / ورود به پوشه</a>      
             </div>      
             <div class="card">      
                 <h3 class="folder7-title">قرآن پرتغالی / Portugiesischer Koran</h3>      
                 <p class="folder7-desc">Tradução do Sagrado Alcorão para o português.</p>      
-                <a href="quran-portuguese/index.html" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Öffnen / ورود به پوشه</a>      
+                <a href="quran-portuguese/index.html" class="lang-btn" style="margin-top:10px;">Öffnen / ورود به پوشه</a>      
             </div>      
             <div class="card">      
-                <h3 class="folder8-title">کتاب امیرالمؤمنین امام علی علیه السلام - کودکان / Maula-imam-ali-AS-kids</h3>      
+                <h3 class="folder8-title">کتاب امیرالمؤمنین امام علی (ع) - کودکان</h3>      
                 <p class="folder8-desc">Kinderbücher und Geschichten über Imam Ali (a.).</p>      
-                <a href="Maula-imam-ali-AS-kids/index.html" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Öffnen / ورود به پوشه</a>      
+                <a href="Maula-imam-ali-AS-kids/index.html" class="lang-btn" style="margin-top:10px;">Öffnen / ورود به پوشه</a>      
             </div>      
         </div>      
     </div>      
 
-    <!-- محصولات فرهنگی و فروش (Cultural Shop) -->      
+    <!-- محصولات فرهنگی و فروش (Cultural Shop) همراه با شماره حساب و دکمه ثبت سفارش -->      
     <div class="container" id="shop">      
         <h2 class="h-shop">Kulturshop & Produkte / محصولات فرهنگی و فروش</h2>      
         <p class="p-shop-desc">Hier finden Sie kulturelle Artikel, Bücher, Kinderlehrmaterialien und religiöse Schriften des Vereins.</p>      
+        
+        <!-- اطلاعات حساب بانکی جهت واریز وجه سفارشات -->
+        <div class="fa-box" style="margin-bottom: 25px;">
+            <strong>اطلاعات حساب بانکی جهت واریز وجه سفارش (Bankverbindung):</strong><br>
+            نام بانک (Bank): [نام بانک را اینجا وارد کنید - مثلاً Sparkasse LeerWittmund]<br>
+            صاحب حساب (Kontoinhaber): Ahlul-Bayt Kultur- und Religionsverein e.V.<br>
+            شماره شبا (IBAN): DE00 0000 0000 0000 0000 00<br>
+            شناسه پرداخت / بابت (Verwendungszweck): نام محصول + نام خانوادگی شما<br>
+            * پس از واریز مبلغ، لطفاً رسید آن را به ایمیل انجمن ارسال فرمایید.
+        </div>
+
         <div class="grid-3">      
+            <!-- ۱. قرآن ترجمه (آلمانی / فارسی) -->
             <div class="card">      
-                <img src="shop1.jpg" alt="Produkt 1" style="width:100%; border-radius:6px;" onerror="this.style.display='none'">      
+                <img src="shop1.jpg" alt="Koran & Übersetzungen" style="width:100%; border-radius:6px; height: 160px; object-fit: cover;" onerror="this.style.display='none'">      
                 <h3>Koran & Übersetzungen</h3>      
                 <p>Übersetzungen des Heiligen Korans (Deutsch/Persisch).</p>      
-                <p><strong>Preis: Auf Anfrage</strong></p>      
-                <a href="mailto:ahlulbayt-leer@gmx.de?subject=Bestellung%20Koran" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Bestellen / سفارش</a>      
+                <p><strong>Preis / قیمت: Auf Anfrage</strong></p>      
+                <a href="mailto:ahlulbayt-leer@gmx.de?subject=Bestellung%20Koran%20-%20ثبت%20سفارش%20قرآن" class="lang-btn">ثبت سفارش / Bestellen</a>      
             </div>      
+
+            <!-- ۲. Lehrmaterial Persisch -->
             <div class="card">      
-                <img src="shop2.jpg" alt="Produkt 2" style="width:100%; border-radius:6px;" onerror="this.style.display='none'">      
+                <img src="shop2.jpg" alt="Lehrmaterial Persisch" style="width:100%; border-radius:6px; height: 160px; object-fit: cover;" onerror="this.style.display='none'">      
                 <h3>Lehrmaterial Persisch</h3>      
                 <p>Kinderbücher und Lernhefte für den persischen Sprachunterricht.</p>      
-                <p><strong>Preis: Auf Anfrage</strong></p>      
-                <a href="mailto:ahlulbayt-leer@gmx.de?subject=Bestellung%20Lehrmaterial" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Bestellen / سفارش</a>      
+                <p><strong>Preis / قیمت: Auf Anfrage</strong></p>      
+                <a href="mailto:ahlulbayt-leer@gmx.de?subject=Bestellung%20Lehrmaterial%20-%20ثبت%20سفارش%20آموزش%20فارسی" class="lang-btn">ثبت سفارش / Bestellen</a>      
             </div>      
+
+            <!-- ۳. اسلامی و تقویم -->
             <div class="card">      
-                <img src="shop3.jpg" alt="Produkt 3" style="width:100%; border-radius:6px;" onerror="this.style.display='none'">      
+                <img src="shop3.jpg" alt="Islamische Kultur & Kalender" style="width:100%; border-radius:6px; height: 160px; object-fit: cover;" onerror="this.style.display='none'">      
                 <h3>Islamische Kultur & Kalender</h3>      
                 <p>Wandkalender und informative Broschüren zu islamischen Anlässen.</p>      
-                <p><strong>Preis: Auf Anfrage</strong></p>      
-                <a href="mailto:ahlulbayt-leer@gmx.de?subject=Bestellung%20Kalender" class="lang-btn" style="display:inline-block; text-decoration:none; text-align:center; margin-top:10px;">Bestellen / سفارش</a>      
+                <p><strong>Preis / قیمت: Auf Anfrage</strong></p>      
+                <a href="mailto:ahlulbayt-leer@gmx.de?subject=Bestellung%20Kalender%20-%20ثبت%20سفارش%20تقویم" class="lang-btn">ثبت سفارش / Bestellen</a>      
             </div>      
         </div>      
     </div>      
 
-    <!-- Mitgliedschaft -->      
+    <!-- عضویت -->      
     <div class="container" id="membership">      
         <h2 class="h-membership">Mitgliedschaft & Mitwirken / عضویت در انجمن</h2>      
         <p class="p-member-desc">Möchten Sie unsere Arbeit aktiv unterstützen, Teil unserer Gemeinschaft werden oder den Verein mitgestalten? Wir freuen uns sehr über neue Mitglieder und Förderer.</p>      
         <p class="p-member-desc2">Sie können den Aufnahmeantrag unkompliziert herunterladen, ausfüllen und per E-Mail an <strong>ahlulbayt-leer@gmx.de</strong> senden oder sich direkt bei unseren Treffen an den Vorstand wenden.</p>      
         
-        <!-- دکمه دانلود فرم PDF عضویت -->
         <div style="margin: 20px 0; text-align: center;">
-            <a href="Aufnahmeantrag auf Vereinsmitgliedschaft.pdf" target="_blank" class="lang-btn" style="display: inline-block; text-decoration: none; padding: 10px 20px; font-size: 1em;">📥 Aufnahmeantrag (PDF) herunterladen / دانلود فرم عضویت</a>
+            <a href="Aufnahmeantrag auf Vereinsmitgliedschaft.pdf" target="_blank" class="lang-btn" style="padding: 10px 20px; font-size: 1em;">📥 Aufnahmeantrag (PDF) herunterladen / دانلود فرم عضویت</a>
         </div>
 
         <div class="fa-box">      
@@ -394,7 +389,7 @@
         <p>&copy; 2026 Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.) | Alle Rechte vorbehalten.</p>      
     </footer>      
 
-    <!-- Script جهت تغییر زبان (آلمانی / انگلیسی) -->      
+    <!-- Script جهت تغییر زبان -->      
     <script>      
         let currentLang = 'de';      
         function toggleLanguage() {      
@@ -413,7 +408,7 @@
                 document.querySelector('.nav-datenschutz').innerText = 'Privacy';      
                 document.querySelector('.header-sub').innerText = 'Non-profit association in Leer (East Frisia)';      
                 document.querySelector('.h-about').innerText = 'About Us';      
-                document.querySelector('.p-about-desc').innerHTML = 'The <strong>Ahlul-Bayt Culture and Religion Association e.V. (i.Gr.)</strong> based in Leer (East Frisia) is a non-profit and impartial initiative that campaigns for peaceful coexistence, intercultural dialogue, language teaching and the cultivation of religious and cultural values. Our association is open to people of all backgrounds and particularly promotes integration, education and youth work.';      
+                document.querySelector('.p-about-desc').innerHTML = 'The <strong>Ahlul-Bayt Culture and Religion Association e.V. (i.Gr.)</strong> based in Leer (East Frisia) is a non-profit and impartial initiative that campaigns for peaceful coexistence, intercultural dialogue, language teaching and the cultivation of religious and cultural values.';      
                 document.querySelector('.h-activities').innerText = 'Our Focus Areas';      
                 document.querySelector('.card1-title').innerText = 'Culture & Religion';      
                 document.querySelector('.card1-desc').innerText = 'Organization of Islamic celebration and commemoration days, Quran recitation circles, lectures and interreligious dialogue.';      
@@ -422,7 +417,7 @@
                 document.querySelector('.card3-title').innerText = 'Social & Integration';      
                 document.querySelector('.card3-desc').innerText = 'Support for newcomers with orientation, advice, strengthening volunteering and local social aid offers.';      
                 document.querySelector('.h-events').innerText = 'Regular Programs & Schedule';      
-                document.querySelector('.p-events-desc').innerText = 'We cordially invite everyone interested to our folders and monthly programs:';      
+                document.querySelector('.p-events-desc').innerText = 'We cordially invite everyone interested to our programs:';      
                 document.querySelector('.th-time').innerText = 'Weekday / Time';      
                 document.querySelector('.th-prog').innerText = 'Program / Event';      
                 document.querySelector('.th-desc').innerText = 'Description';      
@@ -434,9 +429,8 @@
                 document.querySelector('.p-shop-desc').innerText = 'Here you will find cultural items, books, children educational materials and religious writings of the association.';      
                 document.querySelector('.h-membership').innerText = 'Membership & Participation';      
                 document.querySelector('.p-member-desc').innerText = 'Would you like to actively support our work, become part of our community or help shape the association? We look forward to new members and supporters.';      
-                document.querySelector('.p-member-desc2').innerHTML = 'You can easily download the membership application, fill it out and send it by email to <strong>ahlulbayt-leer@gmx.de</strong> or contact the board directly at our meetings.';      
             } else {      
-                location.reload(); // بازگشت به حالت پیش‌فرض (آلمانی)      
+                location.reload();      
             }      
         }      
     </script>      
