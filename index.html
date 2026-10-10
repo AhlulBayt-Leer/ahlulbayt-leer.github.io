@@ -638,7 +638,7 @@ const formattedToday = `${yyyy}-${mm}-${dd}`;
 const todayPrayer = allPrayerTimes.find(p => p.date === formattedToday);
 
 if (todayPrayer) {
-    document.getElementById('prayer-header').innerText = `Gebet in Leer (IZH) - ${dd}/${mm}/${yyyy}`;
+    document.getElementById('prayer-header').innerText = `Gebet in Leer Ostfriesland - ${dd}/${mm}/${yyyy}`;
     document.getElementById('p-fajr').innerText = todayPrayer.fajr;
     document.getElementById('p-sunrise').innerText = todayPrayer.sunrise;
     document.getElementById('p-dhuhr').innerText = todayPrayer.dhuhr;
