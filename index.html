@@ -1,7 +1,8 @@
 <!DOCTYPE html> 
 <html lang="de" id="html-root"> 
 <head>     
-    <meta charset="UTF-8">     
+    <meta charset="UTF-8">
+    <link rel="manifest" href="manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">     
     <title>Ahlul-Bayt Kultur- und Religionsverein e.V. (i.Gr.) - Leer</title>     
     <style>     
@@ -1045,6 +1046,39 @@ if (todayPrayer) {
                 location.reload(); // بازگشت به حالت پیش‌فرض (آلمانی)     
             }     
         }     
-    </script> 
+    </script>
+              <!-- دکمه نصب دو زبانه برای موبایل -->
+<div id="install-container" style="text-align: center; margin: 20px 0; display: none;">
+    <button id="install-btn" style="background: #2563eb; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; font-size: 1rem; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <span class="fa-text">نصب اپلیکیشن روی گوشی</span> / <span class="de-text">App installieren</span>
+    </button>
+</div>
+
+<script>
+// اسکریپت فعال‌سازی دکمه نصب
+let deferredPrompt;
+const installContainer = document.getElementById('install-container');
+const installBtn = document.getElementById('install-btn');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installContainer.style.display = 'block';
+
+    installBtn.addEventListener('click', () => {
+        installContainer.style.display = 'none';
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+            deferredPrompt = null;
+        });
+    });
+});
+
+// ثبت Service Worker برای کارکرد آفلاین
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+    .then(() => console.log("Service Worker Registered"));
+}
+</script>
 </body> 
 </html>
